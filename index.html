@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Premio</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, gold, orange);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      margin: auto;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🎉 ¡FELICIDADES! 🎉</h1>
+    <p>Has sido seleccionado para recibir:</p>
+    <h2 id="premio"></h2>
+    <p style="font-size:12px;color:gray;">(Esto es solo una broma 😄)</p>
+  </div>
+
+  <script>
+    const premios = [
+      "Un millón de dólares 💰 (imaginarios)",
+      "Un abrazo virtual 🤗",
+      "El honor de pagar las pizzas 🍕",
+      "Nada… pero gracias por participar 😆",
+      "Un like invisible 👍",
+      "Respeto eterno del grupo 😎"
+    ];
+
+    const aleatorio = Math.floor(Math.random() * premios.length);
+    document.getElementById("premio").innerText = premios[aleatorio];
+  </script>
+
+</body>
+</html>
