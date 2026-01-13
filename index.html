@@ -2,54 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Premio</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, gold, orange);
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
-    }
-    .card {
-      background: white;
-      padding: 40px;
-      margin: auto;
-      width: 80%;
-      max-width: 400px;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-    h1 {
-      color: green;
-    }
-  </style>
+  <title>Premio sorpresa 🎁</title>
 </head>
-<body>
+<body style="text-align:center; margin-top:50px; font-family:Arial;">
 
-  <div class="card">
-    <h1>🎉 ¡FELICIDADES wladimir medina! 🎉</h1>
-    <p>Has sido seleccionado para recibir:</p>
-    <h2 id="premio"></h2>
-    <p style="font-size:12px;color:gray;">(Esto es solo una broma y en realidad te hackeamos)</p>
-  </div>
+  <h1>🎉 ¡FELICIDADES Wladimir Medina! 🎉</h1>
+  <p>Haz clic para descubrir tu premio</p>
+
+  <button onclick="reproducir()" style="padding:15px;font-size:18px;cursor:pointer;">
+    🎁 Ver premio
+  </button>
+
+  <h2 id="premio"></h2>
 
   <script>
     const premios = [
-      "Un millón de dólares 💰 (imaginarios)",
-      "Un viaje a dubai con slomith 🤗",
-      "un paseo con luna 🍕",
-      "100 lukas en efectivo 😆",
-      "una casa frente al mar por solo una luka👍",
-      "un dia entero con luisito comunica 😎"
+      "Un millón de lukas 💰 (imaginarias)",
+      "un paseo con la luna🤗",
+      "un viaje a dubai con la Schlomith🍕",
+      "una casa frente al mar por 1 luka 😆",
+      "cocacola gratis de por vida 👍",
+      "vivir 1 año con luisito comunica 😎"
     ];
 
-    const aleatorio = Math.floor(Math.random() * premios.length);
-    document.getElementById("premio").innerText = premios[aleatorio];
-  </script>
+    function reproducir() {
+      const aleatorio = Math.floor(Math.random() * premios.length);
+      document.getElementById("premio").innerText = premios[aleatorio];
 
-  <audio id="sonido" autoplay>
-  <source src="victory.mp3" type="audio/mpeg">
-</audio>
+      const audio = new Audio("success-fanfare-trumpets-6185.mp3");
+      audio.play();
+    }
+  </script>
 
 </body>
 </html>
