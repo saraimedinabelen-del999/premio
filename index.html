@@ -27,25 +27,29 @@
 <body>
 
   <div class="card">
-    <h1>🎉 ¡FELICIDADES! 🎉</h1>
+    <h1>🎉 ¡FELICIDADES wladimir medina! 🎉</h1>
     <p>Has sido seleccionado para recibir:</p>
     <h2 id="premio"></h2>
-    <p style="font-size:12px;color:gray;">(Esto es solo una broma 😄)</p>
+    <p style="font-size:12px;color:gray;">(Esto es solo una broma y en realidad te hackeamos)</p>
   </div>
 
   <script>
     const premios = [
       "Un millón de dólares 💰 (imaginarios)",
-      "Un abrazo virtual 🤗",
-      "El honor de pagar las pizzas 🍕",
-      "Nada… pero gracias por participar 😆",
-      "Un like invisible 👍",
-      "Respeto eterno del grupo 😎"
+      "Un viaje a dubai con slomith 🤗",
+      "un paseo con luna 🍕",
+      "100 lukas en efectivo 😆",
+      "una casa frente al mar por solo una luka👍",
+      "un dia entero con luisito comunica 😎"
     ];
 
     const aleatorio = Math.floor(Math.random() * premios.length);
     document.getElementById("premio").innerText = premios[aleatorio];
   </script>
+
+  <audio id="sonido" autoplay>
+  <source src="victory.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
